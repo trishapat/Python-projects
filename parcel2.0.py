@@ -1,3 +1,19 @@
+'''Napisz program do obsługi ładowarki paczek. Po uruchomieniu, aplikacja pyta ile paczek chcesz wysłać, a następnie wymaga podania wagi dla każdej z nich.
+
+Na koniec działania program powinien wyświetlić w podsumowaniu:
+
+Liczbę paczek wysłanych
+Liczbę kilogramów wysłanych
+Suma "pustych" - kilogramów (brak optymalnego pakowania). Liczba paczek * 20 - liczba kilogramów wysłanych
+Która paczka miała najwięcej "pustych" kilogramów, jaki to był wynik
+
+Restrykcje:
+
+Waga elementów musi być z przedziału od 1 do 10 kg.
+Każda paczka może maksymalnie zmieścić 20 kilogramów towaru.
+W przypadku, jeżeli dodawany element przekroczy wagę towaru, ma zostać dodany do nowej paczki, a obecna wysłana.
+W przypadku podania wagi elementu mniejszej od 1kg lub większej od 10kg, dodawanie paczek zostaje zakończone i wszystkie paczki są wysłane. Wyświetlane jest podsumowanie.'''
+
 ilosc_paczek = int(input("Proszę podaj ilość paczek, które chcesz wysłać: "))
 ilosc_paczek_wyslanych = 0
 waga_wyslanej_paczki = 0

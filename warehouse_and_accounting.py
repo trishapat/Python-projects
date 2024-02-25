@@ -131,7 +131,7 @@ while not end_programme:
         if not product_found:
             print("Product not found in the warehouse.")
 
-    elif operation == "7":
+    if operation == "7":
         if not operations:
             print("No operations to show.")
         else:
@@ -155,5 +155,5 @@ while not end_programme:
                 for index in range(len(operations)):
                     print(index)
 
-    elif operation == "8":
+    if operation == "8":
         end_programme = True
