@@ -84,7 +84,7 @@ def create_tutor():
 
 def create_user():
     while True:
-        print("\nSelect user type to create:")
+        print("\nSelect user type to create or go back:")
         print("1. Student")
         print("2. Teacher")
         print("3. Tutor")
