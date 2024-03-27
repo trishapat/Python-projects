@@ -17,6 +17,7 @@ print(arguments)
 def load_system_arguments():
     return sys.argv[1], sys.argv[2], sys.argv[3:]
 
+
 input_file, output_file, changes = load_system_arguments()
 
 file_handler = FileHandler(input_file, output_file, changes)
