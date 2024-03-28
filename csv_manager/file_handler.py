@@ -1,5 +1,6 @@
 import csv
 
+
 class FileHandler:
     def __init__(self, input_file, output_file, changes):
         self.input_file = input_file
@@ -12,14 +13,13 @@ class FileHandler:
         with open(self.input_file) as file:
             data = csv.reader(file)
             for line in data:
-                temp_line = []
-                for something in line:
-                    temp_line.append(something)
+                element_of_the_line = line[0]
+                temp_line = element_of_the_line.split(';')
                 temp_matrix.append(temp_line)
         return temp_matrix
 
     def save_data_to_output_file(self):
-        with open(self.output_file, mode="w") as file:
+        with open(self.output_file, mode="w", newline='') as file:
             writer = csv.writer(file)
             for line in self.matrix:
                 writer.writerow(line)
