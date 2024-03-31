@@ -1,5 +1,5 @@
 import csv
-
+import sys
 
 class FileHandler:
     def __init__(self, input_file, output_file, changes):
@@ -27,7 +27,13 @@ class FileHandler:
     def transform(self):
         for transformation in self.changes:
             transformation_list = transformation.split(",")
-            column = int(transformation_list[0])
-            row = int(transformation_list[1])
+            if len(transformation_list) != 3:
+                print(f"Change '{transformation}' is not in the format 'x,y,value'. Try again.")
+                sys.exit(1)
+            row = int(transformation_list[0])
+            column = int(transformation_list[1])
             value = transformation_list[2]
+            if not (0 <= row < len(self.matrix) and 0 <= column < len(self.matrix[0])):
+                print(f"Coordinates '{row},{column}' out of bounds. Try again.")
+                sys.exit(1)
             self.matrix[row][column] = value

@@ -10,24 +10,32 @@ python reader.py <input_file> <output_file> <change_1> <change_2> ... <change_n>
 coordinates counted from 0, while "value" is the change to go to the specified location."""
 
 import sys
+import os.path
 from file_handler import FileHandler
-
-arguments = sys.argv
-print(arguments)
 
 
 def load_system_arguments():
-    return sys.argv[1], sys.argv[2], sys.argv[3:]
+    args = sys.argv[1:]
+    if len(args) < 2:
+        print("Enter: python reader.py <input_file> <output_file> [<change_1> <change_2> ... <change_n>]")
+        sys.exit(1)
+    input_file, output_file = args[0], args[1]
+    changes = args[2:]
+    return input_file, output_file, changes
 
 
-input_file, output_file, changes = load_system_arguments()
+def main():
+    input_file, output_file, changes = load_system_arguments()
+    if not os.path.isfile(input_file):
+        print(f"Input file '{input_file}' does not exist.")
+        sys.exit(1)
 
-file_handler = FileHandler(input_file, output_file, changes)
+    file_handler = FileHandler(input_file, output_file, changes)
+    file_handler.transform()
+    file_handler.save_data_to_output_file()
+    print(input_file)
+    print(output_file)
+    print(changes)
 
-file_handler.transform()
 
-file_handler.save_data_to_output_file()
-
-print(input_file)
-print(output_file)
-print(changes)
+main()
