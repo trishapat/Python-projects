@@ -12,8 +12,6 @@ Don't know (when the result is not there for some reason or the value is negativ
 
 Query results should be saved to a file. If the date you are looking for is already in the file,
 do not make a query to the API, but return the result from the file.
-
-In the URL, fill in the parameters: latitude, longitude and searched_date
 """
 
 from utils import get_date, check_rain, change_city_to_latitude_and_longitude
