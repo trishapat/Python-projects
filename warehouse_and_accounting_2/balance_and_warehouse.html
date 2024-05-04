@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse and Accounting Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Warehouse and Accounting Application</h1>
+    </header>
+    <main class="container-fluid">
+        <section class="status">
+            <h2>Status</h2>
+            <div class="row">
+                <div class="col">
+                    <h2 class="status-header">Current warehouse inventory:</h2>
+                    <div class="inventory">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chocolate</td>
+                                <td>€3.5</td>
+                                <td>76</td>
+                            </tr>
+                            <tr>
+                                <td>Candy</td>
+                                <td>€4</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <div class="balance">
+                        <p class="balance-label">Current balance:</p>
+                        <p class="balance-amount">€6000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forms">
+            <h2 class="form-header">Forms</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <form id="purchase-form">
+                        <h3 class="form-header">Purchase Form</h3>
+                        <div class="form-group">
+                            <label for="purchase-product">Product Name:</label>
+                            <input type="text" class="form-control" id="purchase-product" placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                            <label for="purchase-price">Price:</label>
+                            <input type="number" class="form-control" id="purchase-price" placeholder="Enter price">
+                        </div>
+                        <div class="form-group">
+                            <label for="purchase-quantity">Quantity:</label>
+                            <input type="number" class="form-control" id="purchase-quantity" placeholder="Enter quantity">
+                        </div>
+                        <button type="submit" class="btn btn-custom">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <form id="sale-form">
+                        <h3 class="form-header">Sale Form</h3>
+                        <div class="form-group">
+                            <label for="sale-product">Product Name:</label>
+                            <input type="text" class="form-control" id="sale-product" placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                            <label for="sale-price">Price:</label>
+                            <input type="number" class="form-control" id="sale-price" placeholder="Enter price">
+                        </div>
+                        <div class="form-group">
+                            <label for="sale-quantity">Quantity:</label>
+                            <input type="number" class="form-control" id="sale-quantity" placeholder="Enter quantity">
+                        </div>
+                        <button type="submit" class="btn btn-custom">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <form id="balance-form">
+                        <h3 class="form-header">Balance Adjustment Form</h3>
+                        <div class="form-group">
+                            <label for="balance-comment">Comment:</label>
+                            <textarea class="form-control" id="balance-comment" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="balance-value">Value:</label>
+                            <input type="number" class="form-control" id="balance-value" placeholder="Enter value">
+                        </div>
+                        <button type="submit" class="btn btn-custom">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Warehouse and Accounting Application</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

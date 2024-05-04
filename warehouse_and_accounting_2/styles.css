@@ -1,0 +1,91 @@
+body {
+    background-color: #DDD0C8;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #323232;
+    color: #E5E2DD;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    margin: 20px auto 50px;
+    max-width: 1200px;
+}
+
+.status, .forms, .history {
+    background-color: #DDD0C8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history th, .history td {
+    border: 1px solid #DDD0C8;
+    padding: 8px;
+    text-align: left;
+}
+
+.history th {
+    background-color: #323232;
+    color: #E5E2DD;
+}
+
+footer {
+    background-color: #323232;
+    color: #E5E2DD;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: inherit;
+}
+
+.status-header {
+    background-color: #323232;
+    color: #E5E2DD;
+    text-align: center;
+}
+
+.balance {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%
+}
+
+.balance-amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.balance-label {
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-header {
+            background-color: #323232;
+            color: #E5E2DD;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+}
+
+.btn-custom {
+            background-color: #998d75;
+            color: #FFF;
+        }
