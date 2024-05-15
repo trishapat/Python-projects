@@ -41,11 +41,12 @@ def main():
     else:
         print("Unsupported file format.")
 
-    input_file_handler.apply_changes()
-    output_file_handler.save_data_to_output_file()
-    print(input_file)
-    print(output_file)
-    print(changes)
+
+    data = input_file_handler.load_data_from_input_file()
+    print(data)
+    data = input_file_handler.apply_changes(data, changes)
+    output_file_handler.save_data_to_output_file(data)
+    print(data)
 
 
 main()

@@ -1,4 +1,4 @@
-drzwi,3,7,0
-kanapka,12,5,1
-pedzel,22,34,5
-plakat,czerwony,8,kij
+0 = {"0": "drzwi", "1": 3, "2": 7, "3": 0}
+1 = {"0": "kanapka", "1": 12, "2": 5, "3": 1}
+2 = {"0": "pedzel", "1": 22, "2": 34, "3": 5}
+3 = {"0": "plakat", "1": "czerwony", "2": 8, "3": "kij"}
